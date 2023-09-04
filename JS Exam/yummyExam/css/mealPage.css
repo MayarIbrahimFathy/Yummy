@@ -1,0 +1,77 @@
+body{
+ background-color: black;
+ color: white;
+}
+.meal-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+  }
+  
+  .meal-image {
+    width: 50%;
+    padding: 20px; 
+    box-sizing: border-box;
+  }
+  
+  .meal-image img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .meal-info {
+    width: 50%;
+    padding: 20px; 
+    box-sizing: border-box;
+    
+  }
+  
+ 
+  .meal-info h1 {
+    font-size: 24px;
+  }
+  
+  .meal-info p {
+    font-size: 16px;
+  }
+  
+  .meal-info h2 {
+    font-size: 20px;
+  }
+  
+  .meal-tags{
+    background-color: #F8D7DA;
+    color: #842029;
+    text-align: center;
+    border-radius: 3px;
+  }
+  .ingredient-badges {
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+  
+  .ingredient-badge {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    background-color: #CFF4FC;
+    color: #198754;
+    border-radius: 20px;
+    font-size: 14px;
+  }
+  
+  .youtube-button {
+    padding: 10px 20px;
+    background-color: #BB2D3B; 
+    color: #FFFFFF; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .youtube-button:hover {
+    background-color: #FF3333; 
+  }

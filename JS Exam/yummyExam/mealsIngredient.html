@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yummy</title>
+    <link rel="icon" href="imgs/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      body {
+        margin: 0;
+        font-family:  sans-serif , Arial, Helvetica;
+      }
+
+      .sideNav {
+        height: 100%;
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: -250px;
+        background-color: black;
+        transition: 0.5s;
+      }
+
+      .sideNav a {
+        padding: 15px ;
+        text-align:start;
+        text-decoration: none;
+        font-size: 18px;
+        color: white;
+        display: block;
+      }
+
+     
+      .content {
+        margin-left: 250px;
+        padding: 15px;
+      }
+
+      .hamburger {
+        position: fixed;
+        left: 20px;
+        top: 20px;
+        cursor: pointer;
+        z-index: 1;
+      }
+
+      .hamburger div {
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        margin: 6px 0;
+        transition: 0.4s;
+      }
+
+      .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+        transform: rotate(-45deg) translate(-5px, 6px);
+      }
+
+      .change .bar2 {
+        opacity: 0;
+      }
+
+      .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-5px, -6px);
+        transform: rotate(45deg) translate(-5px, -6px);
+      }
+
+      @media screen and (max-width: 600px) {
+        .sideNav {
+          width: 0;
+        }
+
+        .content {
+          margin-left: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="sideNav pt-5" id="mySideNav">
+      <a href="search.html">search</a>
+      <a href="categories.html">category</a>
+      <a href="area.html">Area</a>
+      <a href="Ingredients.html">Ingredients</a>
+      <a href="contact.html">contact us</a>
+      <div class="p-2">
+        <i class="fa-brands fa-facebook" style="color: #ffffff"> </i>
+        <i class="fa-brands fa-twitter" style="color: #ffffff"></i>
+        <i class="fa-solid fa-globe" style="color: #ffffff;"></i>
+      </div>
+      <div class="text-white pt-5">
+        <p>Copyright Â© 2019 All Rights</p>
+
+        <p>Reserved.</p>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="hamburger" onclick="toggleNav()">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <div id="mealsIngredientsContainer" class="row ms-2"></div>
+    </div>
+
+    <script>
+      function toggleNav() {
+        const sideNav = document.getElementById("mySideNav");
+        const content = document.querySelector(".content");
+
+        if (sideNav.style.left === "-250px") {
+          sideNav.style.left = "0";
+          content.style.marginLeft = "250px";
+        } else {
+          sideNav.style.left = "-250px";
+          content.style.marginLeft = "0";
+        }
+      }
+    </script>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/mealsIngredients.js"></script>
+  </body>
+</html>
